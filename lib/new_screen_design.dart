@@ -51,28 +51,6 @@ class _NewScreenDesignState extends State<NewScreenDesign> {
                       borderSide: BorderSide(color: Colors.black))),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              controller: categoryEditingController,
-              focusNode: categoryFocusNode,
-              obscureText: isHidePassword ? true : false,
-              decoration: InputDecoration(
-                  hintText: "Search your category",
-                  prefixIcon: Icon(Icons.search),
-                  suffixIcon: GestureDetector(
-                      onTap: () {
-                        print("on click");
-                        isHidePassword = !isHidePassword;
-                        setState(() {});
-                      },
-                      child: isHidePassword
-                          ? Icon(Icons.visibility)
-                          : Icon(Icons.visibility_off)),
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black))),
-            ),
-          ),
           ElevatedButton(
               onPressed: () {
                 if (productEditingController.text.toString().isEmpty) {
