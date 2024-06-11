@@ -24,15 +24,13 @@ class _NewScreenDesignState extends State<NewScreenDesign> {
         title: Text(
           "Discover the best\nProduct!",
           style: GoogleFonts.roboto(
-              color: const Color.fromRGBO(47, 75, 78, 1),
+              color: Color.fromARGB(255, 41, 42, 43),
               fontWeight: FontWeight.w500,
               fontSize: 24),
         ),
         actions: [
           CircleAvatar(
-            radius: 40,
-            backgroundImage: AssetImage("assets/images/image.jpeg"),
-            //child: Image.asset("assets/images/image.jpeg")
+            radius: 50,
           )
         ],
       ),
@@ -56,10 +54,6 @@ class _NewScreenDesignState extends State<NewScreenDesign> {
                 if (productEditingController.text.toString().isEmpty) {
                   focusNode.requestFocus();
                   Fluttertoast.showToast(msg: "Enter the product to search ");
-                }
-                if (categoryEditingController.text.toString().isEmpty) {
-                  categoryFocusNode.requestFocus();
-                  Fluttertoast.showToast(msg: "Enter the category to search ");
                 }
               },
               child: Text("Submit"))
